@@ -1,0 +1,9 @@
+create table doctor(doctor_id int(3),doctor_name varchar(20),doctor_specialisation varchar(20),primary key(doctor_id));
+
+create table patient(patient_id int(3),patient_name varchar(20),primary key(patient_id));
+
+create table available_time_for_appointment(time_id int(3),doctor_id int(3),start_time double,end_time double, primary key(time_id), foreign key(doctor_id) references doctor(doctor_id) );
+
+create table appointment(appointment_id int(3),doctor_id int(3), patient_id int(3),start_time double,end_time double,status varchar(10),primary key(appointment_id),foreign key(doctor_id) references doctor(doctor_id),foreign key(patient_id) references patient(patient_id));
+
+

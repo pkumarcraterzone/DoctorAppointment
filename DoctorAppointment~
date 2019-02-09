@@ -7,20 +7,3 @@ create table available_time_for_appointment(time_id int(3),doctor_id int(3),star
 create table appointment(appointment_id int(3),doctor_id int(3), patient_id int(3),start_time double,end_time double,status varchar(10),primary key(appointment_id),foreign key(doctor_id) references doctor(doctor_id),foreign key(patient_id) references patient(patient_id));
 
 
-insert into available_time_for_appointment values(1,1,1549780200000,1549783800000);
-
-=================================
-
-insert into appointment values(1,1,1,1549781100000,1549782900000,'PENDING');
-
-DELETE FROM available_time_for_appointment WHERE time_id = 1;
-
-
-insert into available_time_for_appointment values(1,1,1549780200000,1549781100000);
-
-insert into available_time_for_appointment values(2,1,1549782900000,1549783800000);
-
-==================================
-
-
-
